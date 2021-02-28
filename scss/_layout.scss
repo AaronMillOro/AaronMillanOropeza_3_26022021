@@ -1,0 +1,92 @@
+// Variables //
+@use "variables" as v;
+@use "elements" as elem;
+
+// Common structural blocks //
+html {
+  color: v.$dark-text;
+  font-family: "Roboto";
+  font-size: v.$regular-font-size;
+}
+
+header {
+  background-color: #FFF;
+}
+
+main {
+  
+  background-color: v.$bg-restaurant;
+  
+  a > img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+}
+
+
+footer {
+  align-items: stretch;
+  background-color: v.$bg-footer;
+  display: flex;
+  flex-direction: column;
+  padding: v.$space-inter-blocks 0;
+
+  h2 {
+    color: v.$light-text;
+    font-family: "Shrikhand";
+    font-size: v.$h2-size;
+    font-style: italic;
+    font-weight: v.$heavy-weigth;
+    margin: (v.$space-inter-elements + 0.3em) v.$space-horizontal;
+  }
+
+  a {
+    color: v.$light-text;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start ;
+    margin: v.$space-inter-elements v.$space-horizontal;
+    text-decoration: none;
+
+    span{
+      margin-right: v.$space-inter-elements ;
+    }
+  }
+
+  a:nth-child(2) {
+    font-weight: v.$weigth;
+  }
+
+  a:nth-child(3) {
+    font-weight: v.$weigth;
+  }
+}
+
+// mobile //
+@media screen and (max-width: 768px) {
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+
+    img {
+      align-self: center;
+      width: 40%;
+    }
+
+    a {
+      font-size: v.$regular-font-size;
+      left: 1em;
+      position: relative;
+      top: 40%;
+    }
+  }
+
+}

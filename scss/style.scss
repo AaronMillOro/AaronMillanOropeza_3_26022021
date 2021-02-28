@@ -1,0 +1,10 @@
+// 1. Normalize browser //
+@use "reset";
+
+// 2. Elements present in the site //
+@use "elements";
+
+// 3. General architecture of site //
+@use "layout";
+
+// 4. Specific layout for a given page //
