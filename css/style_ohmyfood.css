@@ -239,6 +239,16 @@ body section:nth-child(3) {
   flex-direction: column;
   margin: 1.5em 0;
 }
+@media screen and (min-width: 769px) {
+  body section:nth-child(3) {
+    display: flex;
+    justify-self: stretch;
+    flex-direction: row;
+    margin: 1.5em 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
 body section:nth-child(3) h2 {
   font-size: 1.3em;
   font-weight: 600;
