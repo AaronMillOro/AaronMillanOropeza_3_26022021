@@ -26,7 +26,7 @@ header {
   padding: 1em 0;
 
   img {
-    width: 90%;
+    width: 60%;
   }
 }
 
@@ -84,6 +84,13 @@ footer {
 
 // mobile //
 @media screen and (max-width: v.$mobile-screen) {
+
+  header{
+
+    img{
+      width: 80%;
+    }
+  }
 
   main {
     display: grid;

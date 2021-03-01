@@ -1,6 +1,6 @@
 @use "variables" as v;
 
-// buttons //
+// buttons
 .btn{
   background: linear-gradient(180deg, v.$secondary-color, v.$primary-color);
   border-radius: v.$border-radius;
@@ -10,13 +10,9 @@
   font-weight: v.$weight;
 }
 
-// cards //
+// restaurant card 
 
-// instruction card //
+// new alert
 
-// restaurant card //
-
-// new alert//
-
-// dish card //
+// dish card
 
