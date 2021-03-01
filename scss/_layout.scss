@@ -6,7 +6,6 @@ html {
   color: v.$dark-text;
   font-family: "Roboto";
   font-size: v.$regular-font-size;
-  max-width: v.$computer-screen;
   width: 100%;
 }
 
@@ -31,16 +30,18 @@ header {
 }
 
 main {
+  background-color: v.$bg-restaurant;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: v.$bg-restaurant;
 
-  a > img{
-    width: v.$fig-width;
-    height: v.$fig-height;
-    object-fit: cover;
+  a {
+    & > img{
+      width: v.$fig-width;
+      height: v.$fig-height;
+      object-fit: cover;
+    }
   }
 }
 
@@ -93,9 +94,6 @@ footer {
   }
 
   main {
-    display: grid;
-    grid-template-columns: 1fr;
-
     a > img{
       width: 100%;
       height: v.$fig-height;

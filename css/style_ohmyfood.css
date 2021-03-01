@@ -52,11 +52,62 @@ td, th {
   font-weight: 600;
 }
 
+.restaurant {
+  background-color: #FFF;
+  border-radius: 1.5em;
+  box-shadow: 0 2px 5px #EAE5E0;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em;
+  position: relative;
+  text-decoration: none;
+}
+.restaurant img {
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+}
+.restaurant div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "title title title heart" "desc desc desc heart";
+  align-content: center;
+  padding: 1em;
+}
+.restaurant div h3 {
+  font-size: 1em;
+  font-weight: 600;
+  grid-area: title;
+}
+.restaurant div p {
+  font-size: 1em;
+  grid-area: desc;
+}
+.restaurant div span {
+  align-self: center;
+  font-size: 1.2em;
+  grid-area: heart;
+  justify-self: end;
+}
+
+.new {
+  align-self: flex-end;
+  background-color: #99E2D0;
+  border-radius: 0.2em;
+  color: #008766;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.4em;
+  position: absolute;
+  right: 10%;
+  top: 10%;
+}
+
 html {
   color: #000;
   font-family: "Roboto";
   font-size: 1em;
-  max-width: 1200px;
   width: 100%;
 }
 
@@ -80,11 +131,11 @@ header img {
 }
 
 main {
+  background-color: #F6F6F6;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #F6F6F6;
 }
 main a > img {
   width: 250px;
@@ -102,7 +153,7 @@ footer {
 footer h2 {
   color: #FFF;
   font-family: "Shrikhand";
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-style: italic;
   font-weight: 1000;
   margin: 0.7em 1em;
@@ -130,10 +181,6 @@ footer a:nth-child(3) {
     width: 80%;
   }
 
-  main {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
   main a > img {
     width: 100%;
     height: 200px;
@@ -157,6 +204,7 @@ body section:nth-child(2) {
 }
 body section:nth-child(2) a:nth-child(1) {
   background-color: #EAE5E0;
+  box-shadow: 0px -2px 1px rgba(0, 0, 0, 0.2);
   color: #000;
   display: flex;
   flex-direction: row;
@@ -168,16 +216,16 @@ body section:nth-child(2) a:nth-child(1) span {
   margin: 0 0.4em;
 }
 body section:nth-child(2) h1 {
-  align-self: center;
-  display: flex;
+  text-align: center;
   flex-wrap: wrap;
-  font-size: 1.6em;
+  font-size: 1.5em;
   font-weight: 600;
-  padding: 0.8em 0 0.4em 0;
+  padding: 0.8em 1.5em 0.4em 1.5em;
 }
 body section:nth-child(2) p {
-  align-self: center;
+  text-align: center;
   font-size: 1em;
+  padding: 0 1.5em;
 }
 body section:nth-child(2) a:nth-child(4) {
   align-self: center;
@@ -192,10 +240,9 @@ body section:nth-child(3) {
   margin: 1.5em 0;
 }
 body section:nth-child(3) h2 {
-  align-self: center;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 600;
-  padding: 0.8em 0 0.4em 0;
+  padding: 0.8em 1.5em 0.4em 1.5em;
 }
 body section:nth-child(3) div {
   align-items: center;
@@ -223,4 +270,13 @@ body section:nth-child(3) div span:nth-child(2) {
 }
 body section:nth-child(3) div span:nth-child(3) {
   margin: 0 0.4em;
+}
+body main {
+  padding: 3em 0;
+}
+body main h2 {
+  font-size: 1.3em;
+  font-weight: 600;
+  padding: 0 1.5em 0.8em 1.5em;
+  width: 100%;
 }

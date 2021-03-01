@@ -24,6 +24,7 @@ body {
     // Location
     a:nth-child(1){
       background-color: v.$bg-localisation;
+      box-shadow: 0px -2px 1px rgba(v.$dark-text, 0.2);
       color: v.$dark-text;
       display: flex;
       flex-direction: row;
@@ -38,17 +39,17 @@ body {
 
     // Introduction
     h1{
-      align-self: center;
-      display: flex;
+      text-align: center;
       flex-wrap: wrap;
       font-size: v.$h1-size;
       font-weight: v.$weight;
-      padding: (v.$space-inter-elements * 2) 0 v.$space-inter-elements 0;
+      padding: (v.$space-inter-elements * 2) v.$space-inter-blocks v.$space-inter-elements v.$space-inter-blocks;
     }
 
     p{
-      align-self: center;
+      text-align: center;
       font-size: v.$regular-font-size;
+      padding: 0 v.$space-inter-blocks;
     }
 
     a:nth-child(4){
@@ -68,10 +69,9 @@ body {
     margin: v.$space-inter-blocks 0;
 
     h2{
-      align-self: center;
       font-size: v.$h2-size;
       font-weight: v.$weight;
-      padding: (v.$space-inter-elements * 2) 0 v.$space-inter-elements 0;
+      padding: (v.$space-inter-elements * 2) v.$space-inter-blocks v.$space-inter-elements v.$space-inter-blocks;
     }
 
     div{
@@ -103,9 +103,19 @@ body {
       span:nth-child(3){
         margin: 0 v.$space-inter-elements;
       }
-
     }
+  }
 
+  main {
+
+    padding: (v.$space-inter-blocks * 2) 0;
+
+    h2 {
+      font-size: v.$h2-size;
+      font-weight: v.$weight;
+      padding: 0 v.$space-inter-blocks v.$space-inter-elements * 2 v.$space-inter-blocks;
+      width: 100%;
+    }
   }
 
 }
