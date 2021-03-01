@@ -1,18 +1,18 @@
-// Colors //
+// Colors 
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 
-// Backgrounds //
+// Backgrounds 
 $bg-footer: #353535;
 $bg-restaurant: #F6F6F6;
 $bg-localisation: #EAE5E0;
 
-// For text mainly //
+// For text mainly 
 $light-text: #FFF;
 $dark-text: #000;
 
-// Styles and sizes //
+// Styles and sizes 
 $border-radius: 1.5em;
 $font-size: 17px; 
 $h1-size: 1.6em;
@@ -23,5 +23,13 @@ $regular-font-size: 1em;
 $space-inter-elements: 0.4em;
 $space-inter-blocks: 1.5em;
 $space-horizontal: 1em;
-$weigth: 600;
-$heavy-weigth: 1000;
+$weight: 600;
+$heavy-weight: 1000;
+
+// Screen size
+$mobile-screen: 768px;
+$computer-screen: 1200px;
+
+// Figures size
+$fig-width: 250px;
+$fig-height: 200px;

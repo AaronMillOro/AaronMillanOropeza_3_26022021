@@ -1,29 +1,48 @@
 // Variables //
 @use "variables" as v;
-@use "elements" as elem;
 
 // Common structural blocks //
 html {
   color: v.$dark-text;
   font-family: "Roboto";
   font-size: v.$regular-font-size;
+  max-width: v.$computer-screen;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 header {
   background-color: #FFF;
-}
+  padding: 1em 0;
 
-main {
-  
-  background-color: v.$bg-restaurant;
-  
-  a > img{
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
+  img {
+    width: 90%;
   }
 }
 
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: v.$bg-restaurant;
+
+  a > img{
+    width: v.$fig-width;
+    height: v.$fig-height;
+    object-fit: cover;
+  }
+}
 
 footer {
   align-items: stretch;
@@ -37,7 +56,7 @@ footer {
     font-family: "Shrikhand";
     font-size: v.$h2-size;
     font-style: italic;
-    font-weight: v.$heavy-weigth;
+    font-weight: v.$heavy-weight;
     margin: (v.$space-inter-elements + 0.3em) v.$space-horizontal;
   }
 
@@ -55,37 +74,24 @@ footer {
   }
 
   a:nth-child(2) {
-    font-weight: v.$weigth;
+    font-weight: v.$weight;
   }
 
   a:nth-child(3) {
-    font-weight: v.$weigth;
+    font-weight: v.$weight;
   }
 }
 
 // mobile //
-@media screen and (max-width: 768px) {
+@media screen and (max-width: v.$mobile-screen) {
 
-  body {
+  main {
     display: grid;
     grid-template-columns: 1fr;
-  }
 
-  header {
-    display: flex;
-    flex-direction: column;
-    padding: 1em 0;
-
-    img {
-      align-self: center;
-      width: 40%;
-    }
-
-    a {
-      font-size: v.$regular-font-size;
-      left: 1em;
-      position: relative;
-      top: 40%;
+    a > img{
+      width: 100%;
+      height: v.$fig-height;
     }
   }
 

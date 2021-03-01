@@ -1,10 +1,16 @@
-// 1. Normalize browser //
+// 1. Normalize browser
 @use "reset";
 
-// 2. Elements present in the site //
+// 2. Elements present in the site
 @use "elements";
 
-// 3. General architecture of site //
+// 3. General architecture of site
 @use "layout";
 
-// 4. Specific layout for a given page //
+// 4. Specific rules for a given page. Set ONLY one before compilation
+
+// sass scss/style.scss css/style_ohmyfood.css --no-source-map --watch
+@use "index-page";
+
+// sass scss/style.scss css/style_restaurant.css --no-source-map --watch
+// @use "restaurant-page";

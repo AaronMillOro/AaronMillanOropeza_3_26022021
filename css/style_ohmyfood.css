@@ -43,22 +43,52 @@ td, th {
   padding: 0;
 }
 
+.btn, body section:nth-child(2) a:nth-child(4) {
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  border-radius: 1.5em;
+  box-shadow: 0 5px 10px #EAE5E0;
+  color: #FFF;
+  font-size: 1em;
+  font-weight: 600;
+}
+
 html {
   color: #000;
   font-family: "Roboto";
   font-size: 1em;
+  max-width: 1200px;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 header {
   background-color: #FFF;
+  padding: 1em 0;
+}
+header img {
+  width: 90%;
 }
 
 main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   background-color: #F6F6F6;
 }
 main a > img {
-  width: 100%;
-  height: 100px;
+  width: 250px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -96,24 +126,58 @@ footer a:nth-child(3) {
 }
 
 @media screen and (max-width: 768px) {
-  body {
+  main {
     display: grid;
     grid-template-columns: 1fr;
   }
+  main a > img {
+    width: 100%;
+    height: 200px;
+  }
+}
+header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: ". logo .";
+}
+header img {
+  grid-area: logo;
+  justify-self: center;
+}
 
-  header {
-    display: flex;
-    flex-direction: column;
-    padding: 1em 0;
-  }
-  header img {
-    align-self: center;
-    width: 40%;
-  }
-  header a {
-    font-size: 1em;
-    left: 1em;
-    position: relative;
-    top: 40%;
-  }
+body section:nth-child(2) {
+  background-color: #F6F6F6;
+  display: flex;
+  justify-self: stretch;
+  flex-direction: column;
+}
+body section:nth-child(2) a:nth-child(1) {
+  background-color: #EAE5E0;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0.8em 0;
+  text-decoration: none;
+}
+body section:nth-child(2) a:nth-child(1) span {
+  margin: 0 0.4em;
+}
+body section:nth-child(2) h1 {
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.6em;
+  font-weight: 600;
+  padding: 0.8em 0 0.4em 0;
+}
+body section:nth-child(2) p {
+  align-self: center;
+  font-size: 1em;
+}
+body section:nth-child(2) a:nth-child(4) {
+  align-self: center;
+  margin: 1.5em 0;
+  padding: 0.8em;
+  text-decoration: none;
 }

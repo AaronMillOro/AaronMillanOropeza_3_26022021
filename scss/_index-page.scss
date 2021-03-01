@@ -1,0 +1,63 @@
+// Specific layout related to index page
+@use "variables" as v;
+@use "elements";
+
+header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: ". logo .";
+
+  img{
+    grid-area: logo;
+    justify-self: center;
+  }
+}
+
+body {
+ 
+  section:nth-child(2){
+    background-color: v.$bg-restaurant;
+    display: flex;
+    justify-self: stretch;
+    flex-direction: column;
+
+    // Location
+    a:nth-child(1){
+      background-color: v.$bg-localisation;
+      color: v.$dark-text;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: (v.$space-inter-elements * 2) 0;
+      text-decoration: none;
+
+      span {
+        margin: 0 v.$space-inter-elements;
+      }
+    }
+
+    // Introduction
+    h1{
+      align-self: center;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: v.$h1-size;
+      font-weight: v.$weight;
+      padding: (v.$space-inter-elements * 2) 0 v.$space-inter-elements 0;
+    }
+
+    p{
+      align-self: center;
+      font-size: v.$regular-font-size;
+    }
+
+    a:nth-child(4){
+      align-self: center;
+      margin: v.$space-inter-blocks 0;
+      padding: v.$space-inter-elements * 2;
+      text-decoration: none;
+      @extend .btn;
+    }
+  }
+
+}

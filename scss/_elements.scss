@@ -1,4 +1,14 @@
+@use "variables" as v;
+
 // buttons //
+.btn{
+  background: linear-gradient(180deg, v.$secondary-color, v.$primary-color);
+  border-radius: v.$border-radius;
+  box-shadow: 0 5px 10px v.$bg-localisation; 
+  color: v.$light-text;
+  font-size: v.$regular-font-size;
+  font-weight: v.$weight;
+}
 
 // cards //
 
