@@ -56,16 +56,21 @@ main {
     }
   }
 
+  section > h2 {
+    border-bottom: 0.2em solid v.$tertiary-color;
+    width: 50px
+  }
+
   section:nth-child(2) {
-    padding: v.$space-inter-elements v.$space-inter-blocks;
+    padding: (v.$space-inter-elements * 1.2)  v.$space-horizontal;
   }
 
   section:nth-child(3) {
-    padding: v.$space-inter-elements v.$space-inter-blocks;
+    padding: v.$space-inter-elements v.$space-horizontal;
   }
 
   section:nth-child(4) {
-    padding: v.$space-inter-elements v.$space-inter-blocks;
+    padding: v.$space-inter-elements v.$space-horizontal;
   }
 
   a:nth-child(5){
