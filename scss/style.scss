@@ -10,7 +10,7 @@
 // 4. Specific rules for a given page. Set ONLY one before compilation
 
 // sass scss/style.scss css/style_ohmyfood.css --no-source-map --watch
-@use "index-page";
+//@use "index-page";
 
 // sass scss/style.scss css/style_restaurant.css --no-source-map --watch
-// @use "restaurant-page";
+@use "restaurant-page";

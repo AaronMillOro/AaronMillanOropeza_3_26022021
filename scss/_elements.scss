@@ -4,7 +4,7 @@
 .btn{
   background: linear-gradient(180deg, v.$secondary-color, v.$primary-color);
   border-radius: v.$border-radius;
-  box-shadow: 0 5px 10px v.$bg-localisation; 
+  box-shadow: 0 3px 3px darken(v.$bg-localisation, 60%); 
   color: v.$light-text;
   font-size: v.$regular-font-size;
   font-weight: v.$weight;
@@ -74,3 +74,27 @@
 
 // dish card
 
+.dish{
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "h3   h3   h3   h3   h3   h3   .     check"
+                       "desc desc desc desc desc desc price check";
+  
+  h3 {
+    grid-area: h3;
+  }
+
+  p {
+    grid-area: desc;
+  }
+
+  span:nth-child(3){
+    grid-area: price;
+  }
+
+  span:nth-child(4){
+    grid-area: check;
+  }
+}
