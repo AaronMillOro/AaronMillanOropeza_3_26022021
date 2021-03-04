@@ -17,6 +17,7 @@ html {
 body {
   display: grid;
   grid-template-columns: 1fr;
+  max-width: $computer-screen;
 }
 
 header {
@@ -28,13 +29,9 @@ header {
   }
 }
 
-main {
+main > section{
   background-color: $bg-restaurant;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
+  
   a {
     & > img{
       width: $fig-width;
@@ -90,13 +87,6 @@ footer {
     img{
       width: 80%;
     }
-  }
 
-  main {
-    a > img{
-      width: 100%;
-      height: $fig-height;
-    }
   }
-
 }

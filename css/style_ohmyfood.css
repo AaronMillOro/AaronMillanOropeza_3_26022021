@@ -73,6 +73,7 @@ html {
 body {
   display: grid;
   grid-template-columns: 1fr;
+  max-width: 1200px;
 }
 
 header {
@@ -83,15 +84,11 @@ header img {
   width: 60%;
 }
 
-main {
+main > section {
   background-color: #F6F6F6;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
-main a > img {
-  width: 250px;
+main > section a > img {
+  width: 260px;
   height: 200px;
   object-fit: cover;
 }
@@ -133,11 +130,6 @@ footer a:nth-child(3) {
   header img {
     width: 80%;
   }
-
-  main a > img {
-    width: 100%;
-    height: 200px;
-  }
 }
 .btn {
   background: linear-gradient(180deg, #FF79DA, #9356DC);
@@ -162,6 +154,14 @@ footer a:nth-child(3) {
 .restaurant img {
   border-top-left-radius: 1.5em;
   border-top-right-radius: 1.5em;
+  height: 200px;
+  object-fit: cover;
+  width: 260px;
+}
+@media screen and (max-width: 768px) {
+  .restaurant img {
+    width: 100%;
+  }
 }
 .restaurant div {
   display: grid;
@@ -251,13 +251,13 @@ header img {
   justify-self: center;
 }
 
-body section:nth-child(2) {
+body .introduction {
   background-color: #F6F6F6;
   display: flex;
   justify-self: stretch;
   flex-direction: column;
 }
-body section:nth-child(2) a:nth-child(1) {
+body .introduction a:nth-child(1) {
   background-color: #EAE5E0;
   box-shadow: 0px -2px 1px rgba(0, 0, 0, 0.2);
   color: #000;
@@ -267,35 +267,35 @@ body section:nth-child(2) a:nth-child(1) {
   padding: 0.8em 0;
   text-decoration: none;
 }
-body section:nth-child(2) a:nth-child(1) span {
+body .introduction a:nth-child(1) span {
   margin: 0 0.4em;
 }
-body section:nth-child(2) h1 {
+body .introduction h1 {
   text-align: center;
   flex-wrap: wrap;
   font-size: 1.5em;
   font-weight: 600;
   padding: 0.8em 1.5em 0.4em 1.5em;
 }
-body section:nth-child(2) p {
+body .introduction p {
   text-align: center;
   font-size: 1em;
   padding: 0 1.5em;
 }
-body section:nth-child(2) a:nth-child(4) {
+body .introduction a:nth-child(4) {
   align-self: center;
   margin: 1.5em 0 2.25em 0;
   padding: 0.8em;
   text-decoration: none;
 }
-body section:nth-child(3) {
+body .instructions {
   display: flex;
   justify-self: stretch;
   flex-direction: column;
   margin: 1.5em 0 2.1em 0;
 }
-@media screen and (min-width: 769px) {
-  body section:nth-child(3) {
+@media screen and (min-width: 992px) {
+  body .instructions {
     display: flex;
     justify-self: stretch;
     flex-direction: row;
@@ -304,12 +304,12 @@ body section:nth-child(3) {
     align-items: center;
   }
 }
-body section:nth-child(3) h2 {
+body .instructions h2 {
   font-size: 1.3em;
   font-weight: 600;
   padding: 0.8em 1.5em 0.4em 1.5em;
 }
-body section:nth-child(3) div {
+body .instructions div {
   align-items: center;
   display: flex;
   border-radius: 1.5em;
@@ -320,7 +320,7 @@ body section:nth-child(3) div {
   padding: 1.2em 0.4em;
   margin: 0.8em 1.5em;
 }
-body section:nth-child(3) div span:nth-child(1) {
+body .instructions div span:nth-child(1) {
   border-radius: 50%;
   color: #FFF;
   background-color: #9356DC;
@@ -329,83 +329,29 @@ body section:nth-child(3) div span:nth-child(1) {
   right: 20px;
   align-items: center;
 }
-body section:nth-child(3) div span:nth-child(2) {
+body .instructions div span:nth-child(2) {
   color: rgba(53, 53, 53, 0.7);
   margin: 0 0.4em;
 }
-body section:nth-child(3) div span:nth-child(3) {
+body .instructions div span:nth-child(3) {
   margin: 0 0.4em;
 }
-body main {
+body main #restaurants {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   padding: 3em 0;
 }
-body main h2 {
+body main #restaurants h2 {
   font-size: 1.3em;
   font-weight: 600;
   padding: 0 1.5em 0.8em 1.5em;
   width: 100%;
 }
-
-header {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "nav logo .";
-}
-header a {
-  color: #353535;
-  font-size: 1.2em;
-  grid-area: nav;
-  margin-left: 1em;
-  text-decoration: none;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-}
-main section:nth-child(1) {
-  height: 240px;
-  padding-bottom: 1.5em;
-}
-main section:nth-child(1) img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-main section:nth-child(1) .title {
-  background-color: #F6F6F6;
-  border-top-left-radius: 1.5em;
-  border-top-right-radius: 1.5em;
-  bottom: 60px;
-  display: flex;
-  flex-direction: row;
-  font-size: 1.8em;
-  justify-content: space-between;
-  padding: 1em;
-  position: relative;
-}
-main section:nth-child(1) .title h1 {
-  font-family: "Shrikhand";
-  font-style: italic;
-  font-weight: 1000;
-}
-main section > h2 {
-  border-bottom: 0.2em solid #99E2D0;
-  width: 50px;
-}
-main section:nth-child(2) {
-  padding: 0.48em 1em;
-}
-main section:nth-child(3) {
-  padding: 0.4em 1em;
-}
-main section:nth-child(4) {
-  padding: 0.4em 1em;
-}
-main a:nth-child(5) {
-  align-self: center;
-  margin: 1.5em 0 2.25em 0;
-  padding: 0.8em;
-  text-decoration: none;
+@media screen and (max-width: 768px) {
+  body main #restaurants a {
+    margin: 1.5em;
+    width: 100%;
+  }
 }

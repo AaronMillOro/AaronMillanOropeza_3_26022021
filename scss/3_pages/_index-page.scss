@@ -14,7 +14,7 @@ header {
 
 body {
  
-  section:nth-child(2){
+  .introduction{
     background-color: $bg-restaurant;
     display: flex;
     justify-self: stretch;
@@ -51,6 +51,7 @@ body {
       padding: 0 $space-inter-blocks;
     }
 
+    // button
     a:nth-child(4){
       align-self: center;
       margin: $space-inter-blocks 0 ($space-inter-blocks * 1.5) 0;
@@ -60,9 +61,9 @@ body {
   }
 
   // Instructions
-  section:nth-child(3){
+  .instructions {
 
-    @media screen and (min-width: 769px){
+    @media screen and (min-width: $tablette-screen){
       display: flex;
       justify-self: stretch;
       flex-direction: row;
@@ -115,8 +116,11 @@ body {
     }
   }
 
-  main {
-
+  main #restaurants{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: ($space-inter-blocks * 2) 0;
 
     h2 {
@@ -124,6 +128,14 @@ body {
       font-weight: $weight;
       padding: 0 $space-inter-blocks $space-inter-elements * 2 $space-inter-blocks;
       width: 100%;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      
+      a {
+        margin: $space-inter-blocks;
+        width: 100%;
+      }
     }
   }
 

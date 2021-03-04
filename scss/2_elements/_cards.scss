@@ -15,6 +15,13 @@
   img {
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
+    height: $fig-height;
+    object-fit: cover;
+    width: $fig-width;
+
+    @media screen and (max-width: $mobile-screen){
+      width: 100%;
+    }
   }
 
   div {
