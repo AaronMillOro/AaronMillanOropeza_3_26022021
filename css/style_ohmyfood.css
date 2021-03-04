@@ -358,3 +358,54 @@ header a {
   margin-left: 1em;
   text-decoration: none;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+main section:nth-child(1) {
+  height: 240px;
+  padding-bottom: 1.5em;
+}
+main section:nth-child(1) img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+main section:nth-child(1) .title {
+  background-color: #F6F6F6;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  bottom: 60px;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.8em;
+  justify-content: space-between;
+  padding: 1em;
+  position: relative;
+}
+main section:nth-child(1) .title h1 {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 1000;
+}
+main section > h2 {
+  border-bottom: 0.2em solid #99E2D0;
+  width: 50px;
+}
+main section:nth-child(2) {
+  padding: 0.48em 1em;
+}
+main section:nth-child(3) {
+  padding: 0.4em 1em;
+}
+main section:nth-child(4) {
+  padding: 0.4em 1em;
+}
+main a:nth-child(5) {
+  align-self: center;
+  margin: 1.5em 0 2.25em 0;
+  padding: 0.8em;
+  text-decoration: none;
+}
