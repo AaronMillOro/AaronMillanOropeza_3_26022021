@@ -1,0 +1,18 @@
+@use "../0_vars/" as *;
+
+
+header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "nav logo .";
+
+  // logo area already in the index page
+
+  a {
+    color: $bg-footer;
+    font-size: $h3-size;
+    grid-area: nav;
+    margin-left: $space-horizontal;
+    text-decoration: none;
+  }
+}

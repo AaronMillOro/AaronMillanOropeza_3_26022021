@@ -1,0 +1,15 @@
+@use "../0_vars/" as *;
+
+// new alert
+.new {
+  align-self: flex-end;
+  background-color: $tertiary-color;
+  border-radius: $border-new;
+  color: $new-text;
+  font-size: $regular-font-size;
+  font-weight: $weight;
+  padding: $space-inter-elements;
+  position: absolute;
+  right: 10%;
+  top: 10%;
+}

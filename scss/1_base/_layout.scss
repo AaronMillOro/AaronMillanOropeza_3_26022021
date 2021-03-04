@@ -1,11 +1,10 @@
-// Variables //
-@use "variables" as v;
+@use "../0_vars/" as *;
 
 // Common structural blocks //
 html {
-  color: v.$dark-text;
-  font-family: "Roboto";
-  font-size: v.$regular-font-size;
+  color: $dark-text;
+  font-family: "Roboto", sans-serif;
+  font-size: $regular-font-size;
   width: 100%;
 }
 
@@ -21,8 +20,8 @@ body {
 }
 
 header {
-  background-color: #FFF;
-  padding: 1em 0;
+  background-color: $bg-header;
+  padding: $space-header 0;
 
   img {
     width: 60%;
@@ -30,7 +29,7 @@ header {
 }
 
 main {
-  background-color: v.$bg-restaurant;
+  background-color: $bg-restaurant;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -38,8 +37,8 @@ main {
 
   a {
     & > img{
-      width: v.$fig-width;
-      height: v.$fig-height;
+      width: $fig-width;
+      height: $fig-height;
       object-fit: cover;
     }
   }
@@ -47,44 +46,44 @@ main {
 
 footer {
   align-items: stretch;
-  background-color: v.$bg-footer;
+  background-color: $bg-footer;
   display: flex;
   flex-direction: column;
-  padding: v.$space-inter-blocks 0;
+  padding: $space-inter-blocks 0;
 
   h2 {
-    color: v.$light-text;
-    font-family: "Shrikhand";
-    font-size: v.$h2-size;
+    color: $light-text;
+    font-family: "Shrikhand", sans-serif;
+    font-size: $h2-size;
     font-style: italic;
-    font-weight: v.$heavy-weight;
-    margin: (v.$space-inter-elements + 0.3em) v.$space-horizontal;
+    font-weight: $heavy-weight;
+    margin: ($space-inter-elements + 0.3em) $space-horizontal;
   }
 
   a {
-    color: v.$light-text;
+    color: $light-text;
     display: flex;
     flex-direction: row;
     justify-content: flex-start ;
-    margin: v.$space-inter-elements v.$space-horizontal;
+    margin: $space-inter-elements $space-horizontal;
     text-decoration: none;
 
     span{
-      margin-right: v.$space-inter-elements ;
+      margin-right: $space-inter-elements ;
     }
   }
 
   a:nth-child(2) {
-    font-weight: v.$weight;
+    font-weight: $weight;
   }
 
   a:nth-child(3) {
-    font-weight: v.$weight;
+    font-weight: $weight;
   }
 }
 
 // mobile 
-@media screen and (max-width: v.$mobile-screen) {
+@media screen and (max-width: $mobile-screen) {
 
   header{
 
@@ -96,7 +95,7 @@ footer {
   main {
     a > img{
       width: 100%;
-      height: v.$fig-height;
+      height: $fig-height;
     }
   }
 

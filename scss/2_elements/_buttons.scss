@@ -1,0 +1,11 @@
+@use "../0_vars/" as *;
+
+// Check restaurants and request dishes
+.btn{
+  background: linear-gradient(180deg, $secondary-color, $primary-color);
+  border-radius: $border-radius;
+  box-shadow: 0 3px 3px darken($bg-localisation, 60%); 
+  color: $light-text;
+  font-size: $regular-font-size;
+  font-weight: $weight;
+}

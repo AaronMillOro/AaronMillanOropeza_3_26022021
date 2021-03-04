@@ -1,0 +1,96 @@
+@use "../0_vars/" as *;
+
+// restaurant card 
+.restaurant {
+  background-color: $bg-card;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px $bg-localisation;
+  color: $dark-text;
+  display: flex;
+  flex-direction: column;
+  margin: $space-inter-blocks;
+  position: relative;
+  text-decoration: none;
+
+  img {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "title title title heart"
+                         "desc desc desc heart";
+    align-content: center;
+    padding: $space-horizontal;
+
+    h3{
+      font-size: $regular-font-size;
+      font-weight: $weight;
+      grid-area: title;
+    }
+  
+    p {
+      font-size: $regular-font-size;
+      grid-area: desc;
+      
+    }
+  
+    span {
+      align-self: center;
+      font-size: $h3-size;
+      grid-area: heart;
+      justify-self: end;
+    }
+  }
+
+}
+
+// dish card
+.dish{
+  align-items: center;
+  background-color: $bg-card;
+  box-shadow: 0 2px 5px $bg-localisation;
+  border-radius: $border-medium;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "h3   h3   h3   h3   h3   .     check check"
+                       "desc desc desc desc desc price check check";
+  margin: $space-inter-blocks 0;
+  padding-left: $space-horizontal;
+
+  h3 {
+    font-weight: $weight;
+    grid-area: h3;
+    padding: $space-inter-elements 0;
+    padding-top: $space-inter-elements;
+  }
+
+  p {
+    grid-area: desc;
+    padding-bottom: $space-inter-elements;
+  }
+
+  span:nth-child(3){
+    font-weight: $weight;
+    grid-area: price;
+    padding-bottom: $space-inter-elements;
+  }
+
+  span:nth-child(4){
+    align-items: center;
+    background-color: $tertiary-color;
+    border-bottom-right-radius: $border-medium;
+    border-top-right-radius: $border-medium;
+    color: $light-text;
+    display: flex;
+    grid-area: check;
+    font-size: $h2-size;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+}
