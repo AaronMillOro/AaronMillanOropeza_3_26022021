@@ -31,14 +31,6 @@ header {
 
 main > section{
   background-color: $bg-restaurant;
-  
-  a {
-    & > img{
-      width: $fig-width;
-      height: $fig-height;
-      object-fit: cover;
-    }
-  }
 }
 
 footer {

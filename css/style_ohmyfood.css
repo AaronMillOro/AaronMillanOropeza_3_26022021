@@ -87,11 +87,6 @@ header img {
 main > section {
   background-color: #F6F6F6;
 }
-main > section a > img {
-  width: 260px;
-  height: 200px;
-  object-fit: cover;
-}
 
 footer {
   align-items: stretch;
@@ -353,5 +348,83 @@ body main #restaurants h2 {
   body main #restaurants a {
     margin: 1.5em;
     width: 100%;
+  }
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "nav logo .";
+}
+header img {
+  grid-area: logo;
+  justify-self: center;
+}
+header a {
+  color: #353535;
+  font-size: 1.2em;
+  grid-area: nav;
+  margin-left: 1em;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.menu section:nth-child(1) {
+  height: 400px;
+  padding-bottom: 1.5em;
+}
+.menu section:nth-child(1) img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.menu section:nth-child(1) .title {
+  background-color: #F6F6F6;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  bottom: 90px;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.8em;
+  justify-content: space-between;
+  padding: 1em;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .menu section:nth-child(1) .title {
+    justify-content: space-around;
+  }
+}
+.menu section:nth-child(1) .title h1 {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 1000;
+}
+.menu section > h2 {
+  border-bottom: 0.2em solid #99E2D0;
+  width: 50px;
+}
+.menu .courses {
+  padding: 0.48em 1em;
+}
+.menu > a {
+  align-self: center;
+  margin: 1.5em 0 2.25em 0;
+  padding: 0.8em;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    align-items: center;
+  }
+  .menu section:nth-child(1) {
+    width: 100%;
+  }
+  .menu .courses {
+    width: 600px;
   }
 }
