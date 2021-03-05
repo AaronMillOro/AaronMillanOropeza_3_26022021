@@ -72,7 +72,6 @@ body {
       align-items: center;
     }
 
-
     display: flex;
     justify-self: stretch;
     flex-direction: column;
@@ -94,6 +93,11 @@ body {
       font-size: $regular-font-size;
       padding: ($space-inter-elements * 3) $space-inter-elements;
       margin: ($space-inter-elements * 2) $space-inter-blocks;
+      transition: 500ms ease-in-out;
+
+      &:hover span:nth-child(2) {
+        color: $primary-color;
+      }
 
       span:nth-child(1){
         border-radius: 50%;
