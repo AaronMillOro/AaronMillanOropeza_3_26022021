@@ -1,0 +1,16 @@
+.dish {
+
+  &:hover span:nth-child(4) > span{
+    animation: check 500ms;
+  }
+
+}
+
+@keyframes check {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

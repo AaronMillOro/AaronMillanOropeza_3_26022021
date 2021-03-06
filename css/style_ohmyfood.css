@@ -191,12 +191,14 @@ footer a:nth-child(3) {
   background-color: #FFF;
   box-shadow: 0 2px 5px #EAE5E0;
   border-radius: 0.7em;
+  color: #000;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "h3   h3   h3   h3   h3   .     check check" "desc desc desc desc desc price check check";
   margin: 1.5em 0;
   padding-left: 1em;
+  text-decoration: none;
 }
 .dish h3 {
   font-weight: 600;
@@ -338,6 +340,18 @@ footer a:nth-child(3) {
   }
   100% {
     opacity: 1;
+  }
+}
+.dish:hover span:nth-child(4) > span {
+  animation: check 500ms;
+}
+
+@keyframes check {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 header {

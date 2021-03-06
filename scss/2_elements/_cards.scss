@@ -61,6 +61,7 @@
   background-color: $bg-card;
   box-shadow: 0 2px 5px $bg-localisation;
   border-radius: $border-medium;
+  color: $dark-text;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -68,6 +69,7 @@
                        "desc desc desc desc desc price check check";
   margin: $space-inter-blocks 0;
   padding-left: $space-horizontal;
+  text-decoration: none;
 
   h3 {
     font-weight: $weight;
