@@ -1,0 +1,31 @@
+@for $j from 2 through 4 {
+  // the delay per course block = 4 times the delay per dish
+  $course-delay: 1000ms * ($j - 2);
+
+  .courses:nth-child(#{$j}) {
+    // 4 is the maximal number of elements per course
+    @for $i from 2 through 5{
+  
+      .dish:nth-child(#{$i}){
+        animation: smooth-apearance 1s ((250ms * ($i - 2)) + $course-delay);
+      }
+    
+    }
+  
+  }
+
+} 
+
+@keyframes smooth-apearance{
+  0%{
+    opacity: 0.1;
+    transform: translateY(20%);
+  }
+  30%{
+    opacity: 0.3;
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%)
+  }
+}
