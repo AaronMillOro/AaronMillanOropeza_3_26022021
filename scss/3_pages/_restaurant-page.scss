@@ -57,6 +57,19 @@ header {
         font-style: italic;
         font-weight: $heavy-weight;
       }
+
+      // heart container
+      a {
+        color: $dark-text;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "heart" ;
+        text-decoration: none;
+
+        span {
+          grid-area: heart;
+        }
+      }
     }
   }
 
