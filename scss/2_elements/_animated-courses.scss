@@ -3,7 +3,13 @@
   $course-delay: 1500ms * ($j - 2);
 
   .courses:nth-child(#{$j}) {
-    animation: hide-element $course-delay; 
+
+    @if $j == 2{
+      animation: hide-element ($course-delay + 700ms);
+    }
+    @else{
+      animation: hide-element $course-delay; 
+    }
 
     // 4 is the maximal number of elements per course
     @for $i from 2 through 5{

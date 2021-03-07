@@ -1,4 +1,11 @@
 .dish {
+  transition: expand-back 0ms;
+
+  & > span:nth-child(3) {
+    animation: expand-back 300ms linear;
+    display: grid;
+    width: 0;
+  }
 
   &:hover {
     & > span:nth-child(1) {
@@ -11,7 +18,7 @@
     }
 
     & > span:nth-child(3) {
-      animation: expand 500ms linear;
+      animation: expand 300ms linear;
       display: grid;
       width: 15%;
 
@@ -49,8 +56,8 @@
   0%{
     width: 15%;
   }
-  50%{
-    overflow: visible;
+  5%{
+    overflow: hidden;
   }
   70%, 100%{
     width: 0;

@@ -273,7 +273,7 @@ footer a:nth-child(3) {
   }
 }
 .courses:nth-child(2) {
-  animation: hide-element 0ms;
+  animation: hide-element 700ms;
 }
 .courses:nth-child(2) .dish:nth-child(2) {
   animation: hide-element 200ms, smooth-appearance 1S 0ms;
@@ -344,6 +344,14 @@ footer a:nth-child(3) {
     opacity: 1;
   }
 }
+.dish {
+  transition: expand-back 0ms;
+}
+.dish > span:nth-child(3) {
+  animation: expand-back 300ms linear;
+  display: grid;
+  width: 0;
+}
 .dish:hover > span:nth-child(1) {
   width: 70%;
 }
@@ -353,7 +361,7 @@ footer a:nth-child(3) {
   white-space: nowrap;
 }
 .dish:hover > span:nth-child(3) {
-  animation: expand 500ms linear;
+  animation: expand 300ms linear;
   display: grid;
   width: 15%;
 }
@@ -386,8 +394,8 @@ footer a:nth-child(3) {
   0% {
     width: 15%;
   }
-  50% {
-    overflow: visible;
+  5% {
+    overflow: hidden;
   }
   70%, 100% {
     width: 0;
@@ -547,7 +555,7 @@ header a {
   background-color: #F6F6F6;
   border-top-left-radius: 1.5em;
   border-top-right-radius: 1.5em;
-  bottom: 90px;
+  bottom: 80px;
   display: flex;
   flex-direction: row;
   font-size: 1.68em;
