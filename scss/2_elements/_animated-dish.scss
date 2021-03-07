@@ -1,8 +1,8 @@
 .dish {
-  transition: expand 500ms ease-in-out;
 
   &:hover {
     & > span:nth-child(1) {
+      width: 70%;
       h3, p {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -11,18 +11,17 @@
     }
 
     & > span:nth-child(3) {
-      animation: expand 500ms ease-in-out;
+      animation: expand 500ms linear;
       display: grid;
-      overflow: visible;
       width: 15%;
-  
+
       & > span {
         align-self: center;
         justify-self: center;
         animation: checked 300ms linear;
       }
     }
-  } 
+  }
 }
 
 @keyframes checked {
@@ -36,9 +35,24 @@
 
 @keyframes expand {
   0%{
-    width: 0%;
+    width: 0;
+  }
+  50%{
+    overflow: visible;
   }
   70%, 100%{
     width: 15%;
+  }
+}
+
+@keyframes expand-back {
+  0%{
+    width: 15%;
+  }
+  50%{
+    overflow: visible;
+  }
+  70%, 100%{
+    width: 0;
   }
 }

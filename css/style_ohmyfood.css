@@ -59,7 +59,7 @@ td, th {
 html {
   color: #000;
   font-family: "Roboto", sans-serif;
-  font-size: 1em;
+  font-size: 0.9em;
   width: 100%;
 }
 
@@ -129,7 +129,7 @@ footer a:nth-child(3) {
   border-radius: 1.5em;
   box-shadow: 0 3px 3px #5b4c3d;
   color: #FFF;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 600;
   transition: 500ms ease-in-out;
 }
@@ -170,12 +170,12 @@ footer a:nth-child(3) {
   padding: 1em;
 }
 .restaurant div h3 {
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 600;
   grid-area: title;
 }
 .restaurant div p {
-  font-size: 1em;
+  font-size: 0.9em;
   grid-area: desc;
 }
 .restaurant div span {
@@ -201,9 +201,12 @@ footer a:nth-child(3) {
 .dish span:nth-child(1) {
   padding: 0.4em 0;
   padding-top: 0.4em;
-  width: 70%;
+  width: 85%;
 }
 .dish span:nth-child(1) h3, .dish span:nth-child(1) p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 .dish span:nth-child(1) h3 {
@@ -219,8 +222,8 @@ footer a:nth-child(3) {
 .dish span:nth-child(3) {
   align-items: center;
   background-color: #99E2D0;
-  border-bottom-right-radius: 0.7em;
-  border-top-right-radius: 0.7em;
+  border-bottom-right-radius: 0.5em;
+  border-top-right-radius: 0.5em;
   color: #FFF;
   display: none;
   overflow: hidden;
@@ -233,7 +236,7 @@ footer a:nth-child(3) {
   background-color: #99E2D0;
   border-radius: 0.2em;
   color: #008766;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 600;
   padding: 0.4em;
   position: absolute;
@@ -341,8 +344,8 @@ footer a:nth-child(3) {
     opacity: 1;
   }
 }
-.dish {
-  transition: expand 500ms ease-in-out;
+.dish:hover > span:nth-child(1) {
+  width: 70%;
 }
 .dish:hover > span:nth-child(1) h3, .dish:hover > span:nth-child(1) p {
   overflow: hidden;
@@ -350,9 +353,8 @@ footer a:nth-child(3) {
   white-space: nowrap;
 }
 .dish:hover > span:nth-child(3) {
-  animation: expand 500ms ease-in-out;
+  animation: expand 500ms linear;
   display: grid;
-  overflow: visible;
   width: 15%;
 }
 .dish:hover > span:nth-child(3) > span {
@@ -371,10 +373,24 @@ footer a:nth-child(3) {
 }
 @keyframes expand {
   0% {
-    width: 0%;
+    width: 0;
+  }
+  50% {
+    overflow: visible;
   }
   70%, 100% {
     width: 15%;
+  }
+}
+@keyframes expand-back {
+  0% {
+    width: 15%;
+  }
+  50% {
+    overflow: visible;
+  }
+  70%, 100% {
+    width: 0;
   }
 }
 header {
@@ -415,7 +431,7 @@ body .introduction h1 {
 }
 body .introduction p {
   text-align: center;
-  font-size: 1em;
+  font-size: 0.9em;
   padding: 0 1.5em;
 }
 body .introduction a:nth-child(4) {
@@ -452,7 +468,7 @@ body .instructions div {
   background-color: #F6F6F6;
   box-shadow: 0 5px 10px #EAE5E0;
   flex-direction: row;
-  font-size: 1em;
+  font-size: 0.9em;
   padding: 1.2em 0.4em;
   margin: 0.8em 1.5em;
   transition: 500ms ease-in-out;
@@ -546,7 +562,7 @@ header a {
 }
 .menu section:nth-child(1) .title h1 {
   font-family: "Shrikhand";
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-style: italic;
   font-weight: 1000;
 }
