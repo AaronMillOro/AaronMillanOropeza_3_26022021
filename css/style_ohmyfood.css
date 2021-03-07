@@ -47,8 +47,7 @@ td, th {
   font-family: "Shrikhand";
   font-weight: normal;
   font-style: italic;
-  src: url("/fonts/shrikhand/Shrikhand-Regular.eot");
-  src: url("/fonts/shrikhand/Shrikhand-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/shrikhand/Shrikhand-Regular.woff2") format("woff2"), url("/fonts/shrikhand/Shrikhand-Regular.woff") format("woff"), url("/fonts/shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  src: url("/fonts/shrikhand/Shrikhand-Regular.otf"), url("/fonts/shrikhand/Shrikhand-Regular.ttf");
 }
 @font-face {
   font-family: "Roboto";
@@ -96,7 +95,7 @@ footer {
 }
 footer h2 {
   color: #FFF;
-  font-family: "Shrikhand", sans-serif;
+  font-family: "Shrikhand";
   font-size: 1.3em;
   font-style: italic;
   font-weight: 1000;
@@ -155,7 +154,7 @@ footer a:nth-child(3) {
   border-top-right-radius: 1.5em;
   height: 200px;
   object-fit: cover;
-  width: 260px;
+  width: 290px;
 }
 @media screen and (max-width: 768px) {
   .restaurant img {
@@ -187,46 +186,46 @@ footer a:nth-child(3) {
 }
 
 .dish {
-  align-items: center;
+  align-items: stretch;
   background-color: #FFF;
   box-shadow: 0 2px 5px #EAE5E0;
   border-radius: 0.7em;
   color: #000;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "h3   h3   h3   h3   h3   .     check check" "desc desc desc desc desc price check check";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 1.5em 0;
   padding-left: 1em;
   text-decoration: none;
 }
-.dish h3 {
-  font-weight: 600;
-  grid-area: h3;
+.dish span:nth-child(1) {
   padding: 0.4em 0;
   padding-top: 0.4em;
+  width: 70%;
 }
-.dish p {
-  grid-area: desc;
+.dish span:nth-child(1) h3, .dish span:nth-child(1) p {
+  white-space: nowrap;
+}
+.dish span:nth-child(1) h3 {
+  font-weight: 600;
+}
+.dish span:nth-child(2) {
+  align-self: flex-end;
+  font-weight: 600;
+  justify-content: flex-end;
   padding-bottom: 0.4em;
+  width: 10%;
 }
 .dish span:nth-child(3) {
-  font-weight: 600;
-  grid-area: price;
-  padding-bottom: 0.4em;
-}
-.dish span:nth-child(4) {
   align-items: center;
   background-color: #99E2D0;
   border-bottom-right-radius: 0.7em;
   border-top-right-radius: 0.7em;
   color: #FFF;
-  display: flex;
-  grid-area: check;
+  display: none;
+  overflow: hidden;
   font-size: 1.3em;
-  height: 100%;
   justify-content: center;
-  width: 100%;
 }
 
 .new {
@@ -342,16 +341,40 @@ footer a:nth-child(3) {
     opacity: 1;
   }
 }
-.dish:hover span:nth-child(4) > span {
-  animation: check 500ms;
+.dish {
+  transition: expand 500ms ease-in-out;
+}
+.dish:hover > span:nth-child(1) h3, .dish:hover > span:nth-child(1) p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dish:hover > span:nth-child(3) {
+  animation: expand 500ms ease-in-out;
+  display: grid;
+  overflow: visible;
+  width: 15%;
+}
+.dish:hover > span:nth-child(3) > span {
+  align-self: center;
+  justify-self: center;
+  animation: checked 300ms linear;
 }
 
-@keyframes check {
+@keyframes checked {
   0% {
     transform: rotate(0);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes expand {
+  0% {
+    width: 0%;
+  }
+  70%, 100% {
+    width: 15%;
   }
 }
 header {
@@ -523,6 +546,7 @@ header a {
 }
 .menu section:nth-child(1) .title h1 {
   font-family: "Shrikhand";
+  font-size: 1.4em;
   font-style: italic;
   font-weight: 1000;
 }

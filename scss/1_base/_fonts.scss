@@ -3,11 +3,8 @@
   font-family: "Shrikhand";
   font-weight: normal;
   font-style: italic;
-  src: url("/fonts/shrikhand/Shrikhand-Regular.eot");
-  src: url("/fonts/shrikhand/Shrikhand-Regular.eot?#iefix") format("embedded-opentype"),
-       url("/fonts/shrikhand/Shrikhand-Regular.woff2") format("woff2"),
-       url("/fonts/shrikhand/Shrikhand-Regular.woff") format("woff"),
-       url("/fonts/shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  src: url("/fonts/shrikhand/Shrikhand-Regular.otf"),
+       url("/fonts/shrikhand/Shrikhand-Regular.ttf");
 }
 
 @font-face {

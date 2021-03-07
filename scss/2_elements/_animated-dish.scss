@@ -1,16 +1,44 @@
 .dish {
+  transition: expand 500ms ease-in-out;
 
-  &:hover span:nth-child(4) > span{
-    animation: check 500ms;
-  }
+  &:hover {
+    & > span:nth-child(1) {
+      h3, p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
 
+    & > span:nth-child(3) {
+      animation: expand 500ms ease-in-out;
+      display: grid;
+      overflow: visible;
+      width: 15%;
+  
+      & > span {
+        align-self: center;
+        justify-self: center;
+        animation: checked 300ms linear;
+      }
+    }
+  } 
 }
 
-@keyframes check {
+@keyframes checked {
   0%{
     transform: rotate(0);
   }
   100%{
     transform: rotate(360deg);
+  }
+}
+
+@keyframes expand {
+  0%{
+    width: 0%;
+  }
+  70%, 100%{
+    width: 15%;
   }
 }
