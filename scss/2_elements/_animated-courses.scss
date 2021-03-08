@@ -5,7 +5,7 @@
   .courses:nth-child(#{$j}) {
 
     @if $j == 2{
-      animation: hide-element ($course-delay + 700ms);
+      animation: hide-element ($course-delay + 600ms);
     }
     @else{
       animation: hide-element $course-delay; 
@@ -15,7 +15,7 @@
     @for $i from 2 through 5{
       .dish:nth-child(#{$i}){
           $cumulative-delay: (250ms * ($i - 2)) + $course-delay;
-          animation: hide-element $cumulative-delay + 200ms, smooth-appearance 1S $cumulative-delay;
+          animation: hide-element $cumulative-delay + 300ms, smooth-appearance 1S $cumulative-delay;
         }
       }
     

@@ -1,0 +1,91 @@
+@use "../0_vars/" as *;
+
+$time-spinner: 3s;
+
+.index {
+  animation: hide-me ($time-spinner * 1.1);
+}
+  
+.load {
+  animation: loading $time-spinner;
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  height: $spinner-size * 3;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+
+.spinner {
+  animation: spin ease 1s infinite;
+  background-color: transparent;
+  border: 10px solid;
+  border-bottom-color: transparent;
+  border-left-color: rgba($secondary-color, 1);
+  border-right-color: rgba($dark-text, 1);
+  border-radius: 50%;
+  border-top-color: transparent;
+  height: $spinner-size;
+  margin: auto;
+  position: absolute;
+  width: $spinner-size;
+}
+
+.spinner2 {
+  animation: spin2 linear 1.5s infinite;
+  background-color: transparent;
+  border: 10px solid;
+  border-bottom-color: transparent;
+  border-left-color: rgba($primary-color, 1);
+  border-right-color: rgba($tertiary-color, 1);
+  border-radius: 50%;
+  border-top-color: transparent;
+  height: $spinner-size * 1.5;
+  margin: auto;
+  position: absolute;
+  width: $spinner-size * 1.5;
+}
+
+@keyframes loading{
+  0%{
+    opacity: 1;
+  }
+  99%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes hide-me{
+  0%{
+    opacity: 0;
+  }
+  99%{
+    opacity: 0;
+  } 
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
