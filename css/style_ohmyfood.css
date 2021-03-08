@@ -413,8 +413,10 @@ footer a:nth-child(3) {
   flex-direction: row;
   height: 450px;
   justify-content: center;
-  margin: auto;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .spinner {
@@ -450,9 +452,11 @@ footer a:nth-child(3) {
 @keyframes loading {
   0% {
     opacity: 1;
+    visibility: visible;
   }
   99% {
     opacity: 1;
+    visibility: hidden;
   }
   100% {
     opacity: 0;

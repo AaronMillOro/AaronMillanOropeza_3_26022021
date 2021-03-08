@@ -14,8 +14,10 @@ $time-spinner: 3s;
   flex-direction: row;
   height: $spinner-size * 3;
   justify-content: center;
-  margin: auto;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .spinner {
@@ -51,9 +53,11 @@ $time-spinner: 3s;
 @keyframes loading{
   0%{
     opacity: 1;
+    visibility: visible;
   }
   99%{
     opacity: 1;
+    visibility: hidden;
   }
   100%{
     opacity: 0;
