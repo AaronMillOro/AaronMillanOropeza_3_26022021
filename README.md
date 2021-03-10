@@ -6,15 +6,15 @@ L'objectif de ce projet est **développer un site 100% mobile** qui répertorie 
 
 ## Cahier de charges
 
-+ Les [4 maquettes](https://github.com/AaronMillOro/AaronMillanOropeza_3_26022021/tree/master/models) ont été proportionés.
++ Au total, [4 maquettes](https://github.com/AaronMillOro/AaronMillanOropeza_3_26022021/tree/master/models) ont été proportionnées.
 
-+ Les polices à utiliser sont: Shrikhand et Roboto.
++ Les polices à utiliser sont **Shrikhand et Roboto**.
 
-+ Les couleurs sont: i) #9356DC, ii) #FF79DA et iii) #99E2D0.
++ Les couleurs sont pour le site sont: i) #9356DC, ii) #FF79DA et iii) #99E2D0.
 
 + Le développement est fait en **SASS** et sans JavaScript.
 
-+ Site dévelopé par en utilisant l’approche mobile-first. Mais, l’ensemble du **site est responsive** sur mobile, tablette et desktop.
++ Le site est dévelopé en utilisant l’approche mobile-first. Mais, l’ensemble du **site est responsive** sur mobile, tablette et desktop.
 
 + Les pages passent la **validation W3C en [HTML](https://validator.w3.org/) et [CSS](https://validator.w3.org/unicorn/)**.
 
@@ -42,15 +42,15 @@ L'objectif de ce projet est **développer un site 100% mobile** qui répertorie 
 
 ### Effets graphiques et animations
 
-Les effets sont accessibles au clic ou au survol sont visibles sur la maquette. Ils devront utiliser les **animations ou transitions CSS**, pas de JavaScript ni de librairie.
+Les effets sont accessibles au clic ou au survol sur la maquette. Ils utilisent les **animations ou transitions CSS**, pas de JavaScript ni de librairie.
 
-+ Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir. L’ombre portée devra également être plus visible.
++ Au survol, la couleur de fond des **boutons principaux** s’éclaircit légèrement et l’ombre portée est plus visible.
 
-+ Un bouton "J’aime" en forme de cœur est présent sur la maquette. Au survol, il se remplit progressivement. 
++ Un **bouton "J’aime"** en forme de cœur est présent sur la maquette. Au survol, il se remplit progressivement. 
 
-+ Un “loading spinner” apparait pendant 3 secondes quand on arrive sur la page d'accueil. L'intégralité de l'écran est couvert
++ Un **“loading spinner”** apparait pendant 3 secondes quand on arrive sur la page d'accueil et l'intégralité de l'écran est couvert.
 
-+ À l’arrivée sur la page d'un restaurant, les plats s'affichent progressivement avec un léger décalage dans le temps comme indiqué dan les [modèles](https://github.com/AaronMillOro/AaronMillanOropeza_3_26022021/tree/master/models/Animations).
++ À l’arrivée sur la page d'un restaurant, les plats s'affichent progressivement avec un léger décalage dans le temps comme indiqué dans les [modèles](https://github.com/AaronMillOro/AaronMillanOropeza_3_26022021/tree/master/models/Animations).
 
 + Au survol sur un plat, une petite coche apparait à droite du plat. Cette coche coulisse de la droite vers la gauche. Si l’intitulé du plat est trop long, il est rogné avec des points de suspension. Un exemple de l’effet a été [fourni](https://github.com/AaronMillOro/AaronMillanOropeza_3_26022021/tree/master/models/Animations).
 
